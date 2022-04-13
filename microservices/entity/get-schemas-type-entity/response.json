@@ -1,0 +1,268 @@
+{
+    "code": {
+        "status": 1010,
+        "message": "The schemas type entity was founded for the 'Droopy' enterprise."
+    },
+    "data": [
+        {
+            "id": "5e38569701c1888da666c5e1",
+            "collection": "appointment_types",
+            "definition": {
+                "_id": {
+                    "display": "Identificador",
+                    "usable": true,
+                    "visible": false,
+                    "type": "string",
+                    "required": true
+                },
+                "name": {
+                    "display": "Nombre",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                }
+            },
+            "display": "Tipos de Citas",
+            "presentation": {
+                "icon": "text_fields"
+            },
+            "repr": [
+                "name"
+            ],
+            "type": "entity"
+        },
+        {
+            "id": "5e38569701c17a0da5e1c5ec",
+            "collection": "tutors",
+            "definition": {
+                "_id": {
+                    "display": "Identificador",
+                    "usable": true,
+                    "visible": false,
+                    "type": "ObjectId",
+                    "required": true
+                },
+                "first_name": {
+                    "display": "Primer Nombre",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "second_name": {
+                    "display": "Segundo Nombre",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "first_last_name": {
+                    "display": "Primer Apellido",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "second_last_name": {
+                    "display": "Segundo Apellido",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "pets_id": {
+                    "display": "Mascotas",
+                    "usable": true,
+                    "visible": true,
+                    "type": "[ObjectId]",
+                    "relationship": "pets",
+                    "required": true
+                },
+                "address": {
+                    "display": "Dirección",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "phones": {
+                    "display": "Teléfono",
+                    "usable": true,
+                    "visible": true,
+                    "type": "[string]",
+                    "required": true
+                },
+                "email": {
+                    "display": "Email",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                }
+            },
+            "display": "Tutores",
+            "presentation": {
+                "icon": "supervisor_account"
+            },
+            "repr": [
+                "first_name",
+                "second_name",
+                "first_last_name",
+                "second_last_name"
+            ],
+            "type": "entity"
+        },
+        {
+            "id": "5e38569701c17a0da5e1c5e1",
+            "collection": "pets",
+            "definition": {
+                "_id": {
+                    "display": "Identificador",
+                    "usable": true,
+                    "visible": false,
+                    "type": "string",
+                    "required": true
+                },
+                "name": {
+                    "display": "Name",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "tutors_id": {
+                    "display": "Tutores",
+                    "usable": true,
+                    "visible": true,
+                    "type": "[ObjectId]",
+                    "relationship": "tutors",
+                    "required": true
+                },
+                "species": {
+                    "display": "Especie",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "race": {
+                    "display": "Raza",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "gender": {
+                    "display": "Género",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "age": {
+                    "display": "Edad",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                },
+                "unit_age": {
+                    "display": "Unidad",
+                    "usable": true,
+                    "visible": true,
+                    "type": "string",
+                    "required": true
+                }
+            },
+            "display": "Mascotas",
+            "presentation": {
+                "icon": "pest_control_rodent"
+            },
+            "repr": [
+                "name",
+                "race"
+            ],
+            "type": "entity"
+        },
+        {
+            "id": "5e38569701c17a0da666c5e1",
+            "collection": "appointments",
+            "definition": {
+                "_id": {
+                    "display": "Identificador",
+                    "usable": true,
+                    "visible": false,
+                    "type": "string",
+                    "required": true
+                },
+                "day": {
+                    "display": "Día",
+                    "usable": true,
+                    "visible": true,
+                    "type": "number",
+                    "required": true
+                },
+                "month": {
+                    "display": "Mes",
+                    "usable": true,
+                    "visible": true,
+                    "type": "number",
+                    "required": true
+                },
+                "year": {
+                    "display": "Año",
+                    "usable": true,
+                    "visible": true,
+                    "type": "number",
+                    "required": true
+                },
+                "pet_id": {
+                    "usable": true,
+                    "visible": false,
+                    "type": "ObjectId",
+                    "required": true
+                },
+                "pets": {
+                    "display": "Mascota",
+                    "usable": true,
+                    "visible": true,
+                    "type": "ObjectId",
+                    "relationship": "pets",
+                    "local": "pet_id"
+                },
+                "appointment_type_id": {
+                    "usable": true,
+                    "visible": false,
+                    "type": "ObjectId",
+                    "required": true
+                },
+                "appointment_types": {
+                    "display": "Tipo de cita",
+                    "usable": true,
+                    "visible": true,
+                    "type": "ObjectId",
+                    "relationship": "appointment_types",
+                    "local": "appointment_type_id"
+                },
+                "medicines": {
+                    "display": "Medicamentos",
+                    "usable": true,
+                    "visible": true,
+                    "type": "[String]",
+                    "required": true
+                }
+            },
+            "display": "Citas",
+            "presentation": {
+                "icon": "today"
+            },
+            "repr": [
+                "day",
+                "month",
+                "year"
+            ],
+            "type": "entity"
+        }
+    ]
+}

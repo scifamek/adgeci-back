@@ -1,0 +1,8 @@
+{
+  "queryStringParameters": {
+    "collection": "appointments"
+  },
+  "headers": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbnRlcnByaXNlSWQiOiI1ZTk4NjY2NzAxYzE3YTBkYTU2MzI1ZWMifQ.YHRie_L-q2_n-RFXxvrfv61j8Cmf_h7txfb22J_fEro"
+  }
+}

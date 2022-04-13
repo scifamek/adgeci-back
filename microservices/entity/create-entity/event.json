@@ -1,0 +1,13 @@
+{
+  "body": {
+    "collection": "players",
+    "entity": {
+      "name": "Novak",
+      "last_name": "Peréz",
+      "email": "epa"
+    }
+  },
+  "headers": {
+    "token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbnRlcnByaXNlLWlkIjoiNWU5ODY2NjcwMWMxN2EwZGE1NjMyNWVjIiwiZGF0YWJhc2UtbmFtZSI6ImRyb29weV81ZTk4NjY2NzAxYzE3YTBkYTU2MzI1ZWMiLCJyb2xlcyI6WyJhZG1pbiJdfQ.OeQy7bUf_Eh6Mt4SdoCWrpUYgn_I-gjXEcOJZAxfcgMMm9bGqNTbIx0kMArr9bZSQtJMmTDK_NYRX5Q-JWx8ug"
+  }
+}

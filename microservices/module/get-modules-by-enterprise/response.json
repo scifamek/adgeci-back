@@ -1,0 +1,38 @@
+[
+  {
+    "module": {
+      "_id": {
+        "$oid": "5e96326701c17a0da56325ec"
+      },
+      "name": "Users",
+      "color": "#456456",
+      "icon": "supervisor_account",
+      "description": "En este módulo podrá visualizar la información de sus usuarios."
+    },
+    "custom_name": "Propietarios"
+  },
+  {
+    "module": {
+      "_id": {
+        "$oid": "5112233701c17a0da56325ec"
+      },
+      "name": "Event User",
+      "color": "#422456",
+      "icon": "view_module",
+      "description": "Sí deseas ver los eventos que ocurren con sus usuarios, este es el módulo para tí."
+    },
+    "custom_name": "Citas Médicas"
+  },
+  {
+    "module": {
+      "_id": {
+        "$oid": "51122aa306c17a0da56325ec"
+      },
+      "name": "Billing",
+      "color": "#009dff",
+      "icon": "view_module",
+      "description": "Disfrutar de un buen servicio es siempre una prioridad para una organización, mantente al día con tus obligaciones financieras."
+    },
+    "custom_name": "Facturación"
+  }
+]

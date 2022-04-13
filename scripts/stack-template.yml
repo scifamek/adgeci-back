@@ -1,0 +1,54 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Deploy all infrasestructure.
+Resources:
+  RootRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: 'lambda:*'
+                Resource: '*'
+  
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: adgeci-lambda-zip-bucket
+  
+  AdgeciBackApi: 
+    Type: "AWS::ApiGateway::RestApi"
+    Properties: 
+      Name: adgeci-back-api
+      Description: API used for Adgeci requests
+      FailOnWarnings : true
+  
+    
+
+  AdgeciBackApiStage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      DeploymentId:
+        Ref: ApiDeployment
+      RestApiId:
+        Ref: AdgeciBackApi
+      StageName: LATEST
+
+
+
+  
+
+
+  

@@ -1,0 +1,178 @@
+{
+  "uuid": "a61ac920-b8a3-4bd9-b30a-b6a75aa98800",
+  "lastMigration": 19,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "c6ca6853-61e7-4d0f-9ae9-d56bbef3872f",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "v1/get-schemas-type-entity",
+      "responses": [
+        {
+          "uuid": "0896fa7e-6ee9-407e-be21-c21ebbcf78ee",
+          "body": "{\r\n    \"code\": {\r\n        \"status\": 1010,\r\n        \"message\": \"The schemas type entity was founded for the 'Droopy' enterprise.\"\r\n    },\r\n    \"data\": [\r\n        {\r\n            \"id\": \"5e38569701c1888da666c5e1\",\r\n            \"collection\": \"appointment_types\",\r\n            \"definition\": {\r\n                \"_id\": {\r\n                    \"display\": \"Identificador\",\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"name\": {\r\n                    \"display\": \"Nombre\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                }\r\n            },\r\n            \"display\": \"Tipos de Citas\",\r\n            \"presentation\": {\r\n                \"icon\": \"text_fields\"\r\n            },\r\n            \"repr\": [\r\n                \"name\"\r\n            ],\r\n            \"type\": \"entity\"\r\n        },\r\n        {\r\n            \"id\": \"5e38569701c17a0da5e1c5ec\",\r\n            \"collection\": \"tutors\",\r\n            \"definition\": {\r\n                \"_id\": {\r\n                    \"display\": \"Identificador\",\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"ObjectId\",\r\n                    \"required\": true\r\n                },\r\n                \"first_name\": {\r\n                    \"display\": \"Primer Nombre\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"second_name\": {\r\n                    \"display\": \"Segundo Nombre\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"first_last_name\": {\r\n                    \"display\": \"Primer Apellido\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"second_last_name\": {\r\n                    \"display\": \"Segundo Apellido\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"pets_id\": {\r\n                    \"display\": \"Mascotas\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"[ObjectId]\",\r\n                    \"relationship\": \"pets\",\r\n                    \"required\": true\r\n                },\r\n                \"address\": {\r\n                    \"display\": \"Dirección\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"phones\": {\r\n                    \"display\": \"Teléfono\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"[string]\",\r\n                    \"required\": true\r\n                },\r\n                \"email\": {\r\n                    \"display\": \"Email\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                }\r\n            },\r\n            \"display\": \"Tutores\",\r\n            \"presentation\": {\r\n                \"icon\": \"supervisor_account\"\r\n            },\r\n            \"repr\": [\r\n                \"first_name\",\r\n                \"second_name\",\r\n                \"first_last_name\",\r\n                \"second_last_name\"\r\n            ],\r\n            \"type\": \"entity\"\r\n        },\r\n        {\r\n            \"id\": \"5e38569701c17a0da5e1c5e1\",\r\n            \"collection\": \"pets\",\r\n            \"definition\": {\r\n                \"_id\": {\r\n                    \"display\": \"Identificador\",\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"name\": {\r\n                    \"display\": \"Name\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"tutors_id\": {\r\n                    \"display\": \"Tutores\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"[ObjectId]\",\r\n                    \"relationship\": \"tutors\",\r\n                    \"required\": true\r\n                },\r\n                \"species\": {\r\n                    \"display\": \"Especie\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"race\": {\r\n                    \"display\": \"Raza\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"gender\": {\r\n                    \"display\": \"Género\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"age\": {\r\n                    \"display\": \"Edad\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"unit_age\": {\r\n                    \"display\": \"Unidad\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                }\r\n            },\r\n            \"display\": \"Mascotas\",\r\n            \"presentation\": {\r\n                \"icon\": \"pest_control_rodent\"\r\n            },\r\n            \"repr\": [\r\n                \"name\",\r\n                \"race\"\r\n            ],\r\n            \"type\": \"entity\"\r\n        },\r\n        {\r\n            \"id\": \"5e38569701c17a0da666c5e1\",\r\n            \"collection\": \"appointments\",\r\n            \"definition\": {\r\n                \"_id\": {\r\n                    \"display\": \"Identificador\",\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"string\",\r\n                    \"required\": true\r\n                },\r\n                \"day\": {\r\n                    \"display\": \"Día\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"number\",\r\n                    \"required\": true\r\n                },\r\n                \"month\": {\r\n                    \"display\": \"Mes\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"number\",\r\n                    \"required\": true\r\n                },\r\n                \"year\": {\r\n                    \"display\": \"Año\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"number\",\r\n                    \"required\": true\r\n                },\r\n                \"pet_id\": {\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"ObjectId\",\r\n                    \"required\": true\r\n                },\r\n                \"pets\": {\r\n                    \"display\": \"Mascota\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"ObjectId\",\r\n                    \"relationship\": \"pets\",\r\n                    \"local\": \"pet_id\"\r\n                },\r\n                \"appointment_type_id\": {\r\n                    \"usable\": true,\r\n                    \"visible\": false,\r\n                    \"type\": \"ObjectId\",\r\n                    \"required\": true\r\n                },\r\n                \"appointment_types\": {\r\n                    \"display\": \"Tipo de cita\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"ObjectId\",\r\n                    \"relationship\": \"appointment_types\",\r\n                    \"local\": \"appointment_type_id\"\r\n                },\r\n                \"medicines\": {\r\n                    \"display\": \"Medicamentos\",\r\n                    \"usable\": true,\r\n                    \"visible\": true,\r\n                    \"type\": \"[String]\",\r\n                    \"required\": true\r\n                }\r\n            },\r\n            \"display\": \"Citas\",\r\n            \"presentation\": {\r\n                \"icon\": \"today\"\r\n            },\r\n            \"repr\": [\r\n                \"day\",\r\n                \"month\",\r\n                \"year\"\r\n            ],\r\n            \"type\": \"entity\"\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "a8f1e2b0-5d3d-494d-81aa-7d3b40155a67",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "v1/get-schema-definition/:id",
+      "responses": [
+        {
+          "uuid": "6f9a9177-c1aa-4eef-bb8a-67825b806f4c",
+          "body": "{\r\n    \"code\": {\r\n        \"status\": 1015,\r\n        \"message\": \"The schema type entity with name appointments was founded for the 'Droopy' enterprise.\"\r\n    },\r\n    \"data\": {\r\n        \"tags\": [\r\n            \"Día\",\r\n            \"Mes\",\r\n            \"Año\",\r\n            \"Mascota\",\r\n            \"Tipo de cita\",\r\n            \"Medicamentos\"\r\n        ],\r\n        \"definitions\": [\r\n            \"day\",\r\n            \"month\",\r\n            \"year\",\r\n            \"pets\",\r\n            \"appointment_types\",\r\n            \"medicines\"\r\n        ],\r\n        \"columns\": [\r\n            {\r\n                \"definition\": \"day\",\r\n                \"tag\": \"Día\"\r\n            },\r\n            {\r\n                \"definition\": \"month\",\r\n                \"tag\": \"Mes\"\r\n            },\r\n            {\r\n                \"definition\": \"year\",\r\n                \"tag\": \"Año\"\r\n            },\r\n            {\r\n                \"definition\": \"pets\",\r\n                \"tag\": \"Mascota\"\r\n            },\r\n            {\r\n                \"definition\": \"appointment_types\",\r\n                \"tag\": \"Tipo de cita\"\r\n            },\r\n            {\r\n                \"definition\": \"medicines\",\r\n                \"tag\": \"Medicamentos\"\r\n            }\r\n        ]\r\n    }\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "629feaa5-f75a-4425-a774-c454d1a2b3f6",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "v1/get-formatted-entities-by-type",
+      "responses": [
+        {
+          "uuid": "ba04eecb-c3f0-4ccf-b049-7dc2f9b2605f",
+          "body": "{\r\n    \"code\": {\r\n        \"status\": 1005,\r\n        \"message\": \"The entities for the 'appointments' type were founded.\"\r\n    },\r\n    \"data\": [\r\n        {\r\n            \"month\": 7,\r\n            \"day\": 19,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"REFUERZO PARVOVIROSIS Y NETEX-F\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e3fc\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 6,\r\n            \"day\": 18,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"PARVOVIROSIS Y NETEX-F\"\r\n            ],\r\n            \"pet_id\": \"2cfffca6bc3111ebad979828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e3fd\",\r\n            \"pets\": [\r\n                \"Orion Pitbull\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 7,\r\n            \"day\": 5,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"PARVOVIROSIS Y NETEX-F\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e3fe\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 7,\r\n            \"day\": 30,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"REFUERZO PARVOVIROSIS Y NETEX-F\"\r\n            ],\r\n            \"pet_id\": \"2cfffca6bc3111ebad979828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e3ff\",\r\n            \"pets\": [\r\n                \"Orion Pitbull\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 8,\r\n            \"day\": 3,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"REFUERZO PARVOVIROSIS\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e400\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 9,\r\n            \"day\": 10,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"RAC 199\"\r\n            ],\r\n            \"pet_id\": \"2cfffca6bc3111ebad979828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e401\",\r\n            \"pets\": [\r\n                \"Orion Pitbull\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 6,\r\n            \"day\": 20,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"POLIVALENTE,NETEX-F Y DX OTODECTES\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e402\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 8,\r\n            \"day\": 13,\r\n            \"year\": 2016,\r\n            \"medicines\": [\r\n                \"REFUERZO MOQUILLO\"\r\n            ],\r\n            \"pet_id\": \"2cfffca6bc3111ebad979828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e403\",\r\n            \"pets\": [\r\n                \"Orion Pitbull\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 2,\r\n            \"day\": 10,\r\n            \"year\": 2018,\r\n            \"medicines\": [\r\n                \"EDOPETIT\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e404\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        },\r\n        {\r\n            \"month\": 6,\r\n            \"day\": 21,\r\n            \"year\": 2017,\r\n            \"medicines\": [\r\n                \"RAC204\"\r\n            ],\r\n            \"pet_id\": \"2d0048fbbc3111eb97db9828\",\r\n            \"appointment_type_id\": \"f59758c04b1411eba63e70c9\",\r\n            \"_id\": \"61c1742ef3a96fee40e0e405\",\r\n            \"pets\": [\r\n                \"Cocoa Tekel\"\r\n            ],\r\n            \"appointment_types\": [\r\n                \"Vacunación\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "a4a6fcbc-6854-4eb1-9a75-dce00e078466",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "v1/get-modules-by-enterprise",
+      "responses": [
+        {
+          "uuid": "00c73722-f8fc-4c01-b615-5c4a24cb36e9",
+          "body": "{\r\n    \"code\": {\r\n        \"status\": 1005,\r\n        \"message\": \"The entities for the 'appointments' type were founded.\"\r\n    },\r\n    \"data\": [\r\n        {\r\n            \"module\": {\r\n                \"_id\": {\r\n                    \"$oid\": \"5e96326701c17a0da56325ec\"\r\n                },\r\n                \"name\": \"Entities\",\r\n                \"color\": \"#456456\",\r\n                \"icon\": \"supervisor_account\",\r\n                \"description\": \"En este módulo podrá visualizar la información de sus usuarios.\"\r\n            },\r\n            \"custom_name\": \"Clientes y mascotas\"\r\n        }\r\n     \r\n        \r\n    \r\n        \r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "*"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
