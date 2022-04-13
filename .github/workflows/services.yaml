@@ -1,0 +1,53 @@
+name: Labda Services CI
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    environment: pdn
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        AWS_CLI_VERSION: ["2"]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install AWS
+      id: install-aws-cli
+      uses: unfor19/install-aws-cli-action@master
+      with:
+        version: ${{ matrix.AWS_CLI_VERSION }}
+    - name: Configure awscli
+      env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: |
+        aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+        aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY 
+        aws configure set region us-east-1
+    - run: cd server && npm i
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+    - run: |
+        cd server/scripts && python compile_lambdas.py
+      name: Compile Lambdas
+    - name: Create / Update Cloudformation Stack
+      run: |
+        aws cloudformation update-stack --stack-name adgeci-default-stack --template-body file://server/output/stack.yml --capabilities CAPABILITY_NAMED_IAM
+    - run: |
+        cd server/scripts && python upload_lambdas_to_s3.py
+      name: Upload Lambdas to S3
+      if: ${{ always() }}
+
+    - run: |
+        cd server/scripts && python upload_lambdas.py
+      name: Upload Lambdas Code
+      if: ${{ always() }}
